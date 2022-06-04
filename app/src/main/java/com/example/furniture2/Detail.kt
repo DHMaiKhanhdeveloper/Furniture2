@@ -4,8 +4,8 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Model(
-    val imageResource: Int,
-    var title: String,
-    var modelResourceId: Int
+data class Detail(
+    val imageDetails: Int,
+    var titleDetails: String,
+    var DetailsResourceId: Int
 ): Parcelable
