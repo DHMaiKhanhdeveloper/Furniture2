@@ -90,3 +90,13 @@ sceneform.asset('sample_furniture/toilet.obj',
         'default',
         'sample_furniture/toilet.sfa',
         'src/main/res/raw/toilet')
+
+sceneform.asset('sample_furniture/laptop/laptop1.glb',
+        'default',
+        'sample_furniture/laptop/laptop1.sfa',
+        'src/main/res/drawable-laptop/laptop1')
+
+sceneform.asset('sample_furniture/clock/clock1.glb',
+        'default',
+        'sample_furniture/clock/clock1.sfa',
+        'src/main/res/raw/clock/clock1')

@@ -7,5 +7,5 @@ import kotlinx.android.parcel.Parcelize
 data class Detail(
     val imageDetails: Int,
     var titleDetails: String,
-    var DetailsResourceId: Int
+    var detailsResourceId: Int
 ): Parcelable

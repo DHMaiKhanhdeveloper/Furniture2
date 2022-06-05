@@ -21,65 +21,67 @@ import com.google.ar.sceneform.ux.TransformableNode
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.CompletableFuture
 
-private const val BOTTOM_SHEET_PEEK_HEIGHT = 50f
-private const val DOUBLE_TAP_TOLERANCE_MS = 1000L
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var arFragment: ArFragment
-    private lateinit var selectedModel: Model
-    private fun getCurentScene() = arFragment.arSceneView.scene
+    private lateinit var selectedCategory: Category
+    private fun getCurrentScene() = arFragment.arSceneView.scene
     var viewNodes = mutableListOf<Node>()
-    private val modelAdapter: ModelAdapter by lazy {
-        ModelAdapter(models) { model ->
-            /// gan list cho detail adapter
-            val details: List<Detail> = when (model.title) {
-                "Toilet" -> {
-                    toiletDetails
-                }
-                "Closet" -> {
-                    closetDetails
-                }
-                else -> {
-                    listOf()
-                }
-            }
-            detailsAdapter.submitDetails(details)
+    private val categoryAdapter: CategoryAdapter by lazy {
+        CategoryAdapter(models) { model ->
+
+            detailsAdapter.submitDetails(model.details)
             state = 1
 
             /// gan adapter cho recycler view hien tai
             rvModels.adapter = detailsAdapter
         }.also { adapter ->
             adapter.selectedModel.observe(this@MainActivity, Observer {
-                this@MainActivity.selectedModel = it
+                this@MainActivity.selectedCategory = it
                 var newTitle = "Furniture (${it.title})"
                 tvModel.text = newTitle
             })
         }
     }
     private val detailsAdapter: DetailsAdapter = DetailsAdapter(listOf()) { detail ->
-        resId = detail.DetailsResourceId
+        resId = detail.detailsResourceId
     }
 
     @RawRes
     private var resId: Int = 0
 
     private val models = mutableListOf(
-        Model(R.drawable.toilet, "Toilet", R.raw.toilet),
-        Model(R.drawable.closet, "Closet", R.raw.funiture1),
-        Model(R.drawable.clim, "Clim", R.raw.clim),
-        Model(R.drawable.imac, "Imac", R.raw.imac)
+        Category(
+            R.drawable.toilet, "Toilet",
+            listOf(
+                Detail(R.drawable.toilet, "Toilet1", R.raw.toilet),
+                Detail(R.drawable.toilet, "Toilet2", R.raw.funiture1),
+                Detail(R.drawable.toilet, "Toilet3", R.raw.clim)
+            )
+        ),
+        Category(
+            R.drawable.closet, "Closet",
+            listOf(
+                Detail(R.drawable.closet, "Closet1", R.raw.funiture1),
+                Detail(R.drawable.closet, "Closet2", R.raw.funiture1),
+                Detail(R.drawable.closet, "Closet3", R.raw.funiture1)
+            )
+        ),
+
+
+        Category(R.drawable.clim, "Clim", listOf()),
+        Category(R.drawable.imac, "IMac", listOf())
     )
-    private val toiletDetails = mutableListOf(
-        Detail(R.drawable.toilet, "Toilet1", R.raw.toilet),
-        Detail(R.drawable.toilet, "Toilet2", R.raw.funiture1),
-        Detail(R.drawable.toilet, "Toilet3", R.raw.clim)
-    )
-    private val closetDetails = mutableListOf(
-        Detail(R.drawable.closet, "Closet1", R.raw.funiture1),
-        Detail(R.drawable.closet, "Closet2", R.raw.funiture1),
-        Detail(R.drawable.closet, "Closet3", R.raw.funiture1)
-    )
+//    private var toiletDetails = listOf(
+//        Detail(R.drawable.toilet, "Toilet1", R.raw.toilet),
+//        Detail(R.drawable.toilet, "Toilet2", R.raw.funiture1),
+//        Detail(R.drawable.toilet, "Toilet3", R.raw.clim)
+//    )
+//    private val closetDetails = listOf(
+//        Detail(R.drawable.closet, "Closet1", R.raw.funiture1),
+//        Detail(R.drawable.closet, "Closet2", R.raw.funiture1),
+//        Detail(R.drawable.closet, "Closet3", R.raw.funiture1)
+//    )
 
     private var state: Int = 0
 
@@ -123,7 +125,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         rvModels.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        rvModels.adapter = modelAdapter
+        rvModels.adapter = categoryAdapter
 
     }
 
@@ -131,7 +133,7 @@ class MainActivity : AppCompatActivity() {
         if (state == 0) {
             super.onBackPressed()
         } else {
-            rvModels.adapter = modelAdapter
+            rvModels.adapter = categoryAdapter
         }
     }
 
@@ -165,17 +167,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    private fun rotateviewNodetowardsUser(){
-//        for( node in viewNodes ){
-//            node.renderable?.let {
-//                val camPos = getCurentScene().camera.worldPosition
-//                val viewNodePos = node.worldPosition
-//                val dir = Vector3.subtract(camPos,viewNodePos)
-//                node.worldRotation = Quaternion.lookRotation(dir, Vector3.up())
-//            }
-//
-//        }
-//    }
 
     private fun addNodeToScene(
         anchor: Anchor,
@@ -186,7 +177,7 @@ class MainActivity : AppCompatActivity() {
         val modelNode = TransformableNode(arFragment.transformationSystem).apply {
             renderable = modelRenderable
             setParent(anchorNode)
-            getCurentScene().addChild(anchorNode)
+            getCurrentScene().addChild(anchorNode)
             select()
         }
 
@@ -198,7 +189,7 @@ class MainActivity : AppCompatActivity() {
             localPosition = Vector3(0f, modelNode.localPosition.y, 0f)
             (viewRenderable.view as Button).setOnClickListener {
                 arFragment.arSceneView.scene.removeChild(anchorNode)
-                getCurentScene().removeChild(anchorNode)
+                getCurrentScene().removeChild(anchorNode)
                 viewNodes.remove(this)
             }
         }
@@ -226,7 +217,7 @@ class MainActivity : AppCompatActivity() {
             .setView(this, createDeleteButton())
             .build()
         CompletableFuture.allOf(modelRenderable, viewRenderable)
-            .thenAccept() {
+            .thenAccept {
                 callback(modelRenderable.get(), viewRenderable.get())
             }
             .exceptionally {
@@ -234,5 +225,10 @@ class MainActivity : AppCompatActivity() {
                 null
 
             }
+    }
+
+    private companion object {
+        const val BOTTOM_SHEET_PEEK_HEIGHT = 50f
+        const val DOUBLE_TAP_TOLERANCE_MS = 1000L
     }
 }
