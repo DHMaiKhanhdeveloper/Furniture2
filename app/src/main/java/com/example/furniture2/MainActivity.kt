@@ -19,58 +19,102 @@ import com.google.ar.sceneform.rendering.ViewRenderable
 import com.google.ar.sceneform.ux.ArFragment
 import com.google.ar.sceneform.ux.TransformableNode
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_details.*
 import java.util.concurrent.CompletableFuture
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var arFragment: ArFragment
     private lateinit var selectedCategory: Category
+    private lateinit var selectedDetail: Detail
     private fun getCurrentScene() = arFragment.arSceneView.scene
     var viewNodes = mutableListOf<Node>()
-    private val categoryAdapter: CategoryAdapter by lazy {
-        CategoryAdapter(models) { model ->
 
-            detailsAdapter.submitDetails(model.details)
-            state = 1
-
-            /// gan adapter cho recycler view hien tai
-            rvModels.adapter = detailsAdapter
-        }.also { adapter ->
-            adapter.selectedModel.observe(this@MainActivity, Observer {
-                this@MainActivity.selectedCategory = it
-                var newTitle = "Furniture (${it.title})"
-                tvModel.text = newTitle
-            })
-        }
-    }
-    private val detailsAdapter: DetailsAdapter = DetailsAdapter(listOf()) { detail ->
-        resId = detail.detailsResourceId
-    }
+    private var state: Int = 0
 
     @RawRes
     private var resId: Int = 0
 
+    private val categoryAdapter: CategoryAdapter by lazy {
+        CategoryAdapter(models) { model ->
+            detailsAdapter.submitDetails(model.details)
+            state = 1
+            rvModels.adapter = detailsAdapter
+        }.also { adapter ->
+            adapter.selectedCategory.observe(this@MainActivity, Observer {
+                var newTitle = "Furniture(${it.title})"
+                tvModel.text = newTitle
+            })
+        }
+    }
+
+    private val detailsAdapter: DetailsAdapter by  lazy {
+        DetailsAdapter(listOf()) { detail ->
+            resId = detail.detailsResourceId
+        }.also { adapter ->
+            adapter.selectedDetail.observe(this@MainActivity, Observer{
+                this@MainActivity.selectedDetail = it
+                var newTitleDetail = "Furniture(${it.titleDetails})"
+                tvModel.text = newTitleDetail
+            })
+
+        }
+    }
+
+
+
     private val models = mutableListOf(
+
         Category(
-            R.drawable.toilet, "Toilet",
+            R.drawable.car1, "Car",
             listOf(
-                Detail(R.drawable.toilet, "Toilet1", R.raw.toilet),
-                Detail(R.drawable.toilet, "Toilet2", R.raw.funiture1),
-                Detail(R.drawable.toilet, "Toilet3", R.raw.clim)
+                Detail(R.drawable.car1, "Car1", R.raw.car2),
+                Detail(R.drawable.car2, "Car2", R.raw.car2),
+                Detail(R.drawable.car3, "Car3", R.raw.car3),
+                Detail(R.drawable.car4, "Car4", R.raw.car4)
             )
         ),
         Category(
-            R.drawable.closet, "Closet",
+            R.drawable.chair1, "Chair",
             listOf(
-                Detail(R.drawable.closet, "Closet1", R.raw.funiture1),
-                Detail(R.drawable.closet, "Closet2", R.raw.funiture1),
-                Detail(R.drawable.closet, "Closet3", R.raw.funiture1)
+                Detail(R.drawable.chair1, "Chair1", R.raw.chair1),
+                Detail(R.drawable.chair2, "Chair2", R.raw.chair2),
+                Detail(R.drawable.chair3, "Chair3", R.raw.chair3),
+                Detail(R.drawable.chair4, "Chair4", R.raw.chair4),
+                Detail(R.drawable.chair5, "Chair5", R.raw.chair5),
+                Detail(R.drawable.chair6, "Chair6", R.raw.chair6)
+
             )
         ),
+        Category(
+            R.drawable.kitchen, "Kitchen",
+            listOf(
+                Detail(R.drawable.kitchen1, "Kitchen1", R.raw.kitchen1),
+                Detail(R.drawable.kitchen2, "Kitchen2", R.raw.kitchen2),
+                Detail(R.drawable.kitchen3, "Kitchen3", R.raw.kitchen3),
+                Detail(R.drawable.kitchen4, "Kitchen4", R.raw.kitchen4),
+                Detail(R.drawable.kitchen5, "Kitchen5", R.raw.kitchen5),
+                Detail(R.drawable.kitchen6, "Kitchen6", R.raw.kitchen6),
+                Detail(R.drawable.kitchen7, "Kitchen7", R.raw.kitchen7),
+                Detail(R.drawable.kitchen8, "Kitchen8", R.raw.kitchen8)
+
+            )
+        ),
+        Category(
+            R.drawable.lamp1, "Lamp",
+            listOf(
+                Detail(R.drawable.lamp1, "Lamp1", R.raw.lamp1),
+                Detail(R.drawable.lamp2, "Lamp2", R.raw.lamp2),
+                Detail(R.drawable.lamp3, "Lamp3", R.raw.lamp3),
+                Detail(R.drawable.lamp4, "Lamp4", R.raw.lamp4),
+                Detail(R.drawable.lamp5, "Lamp5", R.raw.lamp5)
 
 
-        Category(R.drawable.clim, "Clim", listOf()),
-        Category(R.drawable.imac, "IMac", listOf())
+            )
+        )
+
+
+
     )
 //    private var toiletDetails = listOf(
 //        Detail(R.drawable.toilet, "Toilet1", R.raw.toilet),
@@ -83,7 +127,7 @@ class MainActivity : AppCompatActivity() {
 //        Detail(R.drawable.closet, "Closet3", R.raw.funiture1)
 //    )
 
-    private var state: Int = 0
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -126,6 +170,20 @@ class MainActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         rvModels.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         rvModels.adapter = categoryAdapter
+//        rvModels.adapter = CategoryAdapter(models).apply {
+//            selectedCategory.observe(this@MainActivity , Observer {
+//                this@MainActivity.selectedCategory = it
+//                var newTitle = "Furniture (${it.title})"
+//                tvModel.text = newTitle
+//            })
+//        }
+//        rvModels.adapter = DetailsAdapter(models){
+//            selectedDetail.observe(this@MainActivity , Observer {
+//                this@MainActivity.selectedDetail = it
+//                var newTitle = "Furniture (${it.titleDetails})"
+//                tvModel.text = newTitle
+//            })
+//        }
 
     }
 

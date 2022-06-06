@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '201',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: 'acd0dbed96e6648cde939124882785de3d389c92',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '841f81e68a7e8a06c0260b5a01fb99fcf3b68dc6',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/bed3.glb',
+    name: 'bed3',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: 'acd0dbed96e6648cde939124882785de3d389c92',
+      pipeline_name: '*2',
+    },
+    {
+      name: '841f81e68a7e8a06c0260b5a01fb99fcf3b68dc6',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

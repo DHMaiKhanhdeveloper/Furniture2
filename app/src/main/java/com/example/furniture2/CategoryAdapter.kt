@@ -14,7 +14,7 @@ class CategoryAdapter(
 
 ) : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
-    var selectedModel = MutableLiveData<Category>()
+    var selectedCategory = MutableLiveData<Category>()
     private var selectedModelIndex = 0
 
     class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
@@ -34,7 +34,7 @@ class CategoryAdapter(
 
         if (selectedModelIndex == holder.layoutPosition) {
             holder.itemView.setBackgroundColor(SELECTED_MODEL_COLOR)
-            selectedModel.value = categories[holder.layoutPosition]
+            selectedCategory.value = categories[holder.layoutPosition]
         } else {
             holder.itemView.setBackgroundColor(UNSELECTED_MODEL_COLOR)
         }
@@ -46,22 +46,18 @@ class CategoryAdapter(
             tvTitle.text = categories[position].title
 
             setOnClickListener {
-                selectModel(holder)
-
-
+                selectCategory(holder)
+                itemClick(categories[position])
             }
-        }
-        holder.itemView.setOnClickListener {
-            itemClick(categories[position])
         }
     }
 
-    private fun selectModel(holder: CategoryViewHolder) {
+    private fun selectCategory(holder: CategoryViewHolder) {
         if (selectedModelIndex != holder.layoutPosition) {
             holder.itemView.setBackgroundColor(SELECTED_MODEL_COLOR)
             notifyItemChanged(selectedModelIndex)
             selectedModelIndex = holder.layoutPosition
-            selectedModel.value = categories[holder.layoutPosition]
+            selectedCategory.value = categories[holder.layoutPosition]
         }
     }
 

@@ -94,9 +94,159 @@ sceneform.asset('sample_furniture/toilet.obj',
 sceneform.asset('sample_furniture/laptop/laptop1.glb',
         'default',
         'sample_furniture/laptop/laptop1.sfa',
-        'src/main/res/drawable-laptop/laptop1')
+        'src/main/res/raw/laptop1')
 
 sceneform.asset('sample_furniture/clock/clock1.glb',
         'default',
         'sample_furniture/clock/clock1.sfa',
-        'src/main/res/raw/clock/clock1')
+        'src/main/res/raw/clock1')
+
+
+
+
+
+
+
+
+
+
+
+sceneform.asset('sample_furniture/car2.glb',
+        'default',
+        'sample_furniture/car2.sfa',
+        'src/main/res/raw/car2')
+
+sceneform.asset('sample_furniture/car3.glb',
+        'default',
+        'sample_furniture/car3.sfa',
+        'src/main/res/raw/car3')
+
+sceneform.asset('sample_furniture/car4.glb',
+        'default',
+        'sample_furniture/car4.sfa',
+        'src/main/res/raw/car4')
+
+
+
+
+
+sceneform.asset('sample_furniture/car1.glb',
+        'default',
+        'sample_furniture/car1.sfa',
+        'src/main/res/raw/car1')
+
+sceneform.asset('sample_furniture/chair1.glb',
+        'default',
+        'sample_furniture/chair1.sfa',
+        'src/main/res/raw/chair1')
+
+sceneform.asset('sample_furniture/chair2.glb',
+        'default',
+        'sample_furniture/chair2.sfa',
+        'src/main/res/raw/chair2')
+
+sceneform.asset('sample_furniture/chair3.glb',
+        'default',
+        'sample_furniture/chair3.sfa',
+        'src/main/res/raw/chair3')
+
+sceneform.asset('sample_furniture/chair4.glb',
+        'default',
+        'sample_furniture/chair4.sfa',
+        'src/main/res/raw/chair4')
+
+sceneform.asset('sample_furniture/chair5.glb',
+        'default',
+        'sample_furniture/chair5.sfa',
+        'src/main/res/raw/chair5')
+
+sceneform.asset('sample_furniture/chair6.glb',
+        'default',
+        'sample_furniture/chair6.sfa',
+        'src/main/res/raw/chair6')
+
+sceneform.asset('sample_furniture/lamp1.glb',
+        'default',
+        'sample_furniture/lamp1.sfa',
+        'src/main/res/raw/lamp1')
+
+sceneform.asset('sample_furniture/lamp2.glb',
+        'default',
+        'sample_furniture/lamp2.sfa',
+        'src/main/res/raw/lamp2')
+
+sceneform.asset('sample_furniture/lamp3.glb',
+        'default',
+        'sample_furniture/lamp3.sfa',
+        'src/main/res/raw/lamp3')
+
+sceneform.asset('sample_furniture/lamp5.glb',
+        'default',
+        'sample_furniture/lamp5.sfa',
+        'src/main/res/raw/lamp5')
+
+sceneform.asset('sample_furniture/lamp4.glb',
+        'default',
+        'sample_furniture/lamp4.sfa',
+        'src/main/res/raw/lamp4')
+
+sceneform.asset('sample_furniture/bed1.glb',
+        'default',
+        'sample_furniture/bed1.sfa',
+        'src/main/res/raw/bed1')
+
+sceneform.asset('sample_furniture/bed2.glb',
+        'default',
+        'sample_furniture/bed2.sfa',
+        'src/main/res/raw/bed2')
+
+sceneform.asset('sample_furniture/bed3.glb',
+        'default',
+        'sample_furniture/bed3.sfa',
+        'src/main/res/raw/bed3')
+
+sceneform.asset('sample_furniture/bed4.glb',
+        'default',
+        'sample_furniture/bed4.sfa',
+        'src/main/res/raw/bed4')
+
+sceneform.asset('sample_furniture/kitchen1.glb',
+        'default',
+        'sample_furniture/kitchen1.sfa',
+        'src/main/res/raw/kitchen1')
+
+sceneform.asset('sample_furniture/kitchen2.glb',
+        'default',
+        'sample_furniture/kitchen2.sfa',
+        'src/main/res/raw/kitchen2')
+
+sceneform.asset('sample_furniture/kitchen3.glb',
+        'default',
+        'sample_furniture/kitchen3.sfa',
+        'src/main/res/raw/kitchen3')
+
+sceneform.asset('sample_furniture/kitchen4.glb',
+        'default',
+        'sample_furniture/kitchen4.sfa',
+        'src/main/res/raw/kitchen4')
+
+sceneform.asset('sample_furniture/kitchen5.glb',
+        'default',
+        'sample_furniture/kitchen5.sfa',
+        'src/main/res/raw/kitchen5')
+
+sceneform.asset('sample_furniture/kitchen6.glb',
+        'default',
+        'sample_furniture/kitchen6.sfa',
+        'src/main/res/raw/kitchen6')
+
+sceneform.asset('sample_furniture/kitchen7.glb',
+        'default',
+        'sample_furniture/kitchen7.sfa',
+        'src/main/res/raw/kitchen7')
+
+sceneform.asset('sample_furniture/kitchen8.glb',
+        'default',
+        'sample_furniture/kitchen8.sfa',
+        'src/main/res/raw/kitchen8')
+
