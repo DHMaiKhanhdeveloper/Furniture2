@@ -1,0 +1,242 @@
+{
+  materials: [
+    {
+      name: '432',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '1e48224ecd527ce33a1cb95315d4ad73c517e36e',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '8da1e280ecc2033a3d56a5f2fa182916a74af2de',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+    {
+      name: '433',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: 'd4b93bf57522e73313de0bb93b76e40be6a54192',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '120e2dc6f0a36ef01fec32a319e3208ea101eba0',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+    {
+      name: '434',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: 'feb8b5249999b25b3ffb7a8eeab1702a63b9a305',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            0.49803900000000001,
+            0.49803900000000001,
+            0.49803900000000001,
+          ],
+        },
+        {
+          glossinessFactor: 0.031372999999999998,
+        },
+        {
+          specularGlossiness: null,
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/bath9.glb',
+    name: 'bath9',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: '1e48224ecd527ce33a1cb95315d4ad73c517e36e',
+      pipeline_name: '*2',
+    },
+    {
+      name: '8da1e280ecc2033a3d56a5f2fa182916a74af2de',
+      pipeline_name: '*3',
+    },
+    {
+      name: 'd4b93bf57522e73313de0bb93b76e40be6a54192',
+      pipeline_name: '*6',
+    },
+    {
+      name: '120e2dc6f0a36ef01fec32a319e3208ea101eba0',
+      pipeline_name: '*7',
+    },
+    {
+      name: 'feb8b5249999b25b3ffb7a8eeab1702a63b9a305',
+      pipeline_name: '*10',
+    },
+  ],
+  version: '0.54:2',
+}

@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '503',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '01b72ce14d2768d5abd3b9a7914347aca6ecbd5f',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: 'f66a14aec8b039ba4f56c954bf56dc326986912f',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/desk2.glb',
+    name: 'desk2',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: '01b72ce14d2768d5abd3b9a7914347aca6ecbd5f',
+      pipeline_name: '*2',
+    },
+    {
+      name: 'f66a14aec8b039ba4f56c954bf56dc326986912f',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

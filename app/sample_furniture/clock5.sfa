@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '124',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: 'f7ee66f6cce44df8a754d2811809e9d0ef92e128',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '17adc5e7b2bdd3b5ae9c3f669802324fca2b830e',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/clock5.glb',
+    name: 'clock5',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: 'f7ee66f6cce44df8a754d2811809e9d0ef92e128',
+      pipeline_name: '*2',
+    },
+    {
+      name: '17adc5e7b2bdd3b5ae9c3f669802324fca2b830e',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

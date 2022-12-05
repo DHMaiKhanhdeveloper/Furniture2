@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '56',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: 'ab974589208d818ca6cdd0084013c37a5d572f2f',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '0da39695a72c10790f36fb5e29fc2addebdf1c5c',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/pan.glb',
+    name: 'pan',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: 'ab974589208d818ca6cdd0084013c37a5d572f2f',
+      pipeline_name: '*2',
+    },
+    {
+      name: '0da39695a72c10790f36fb5e29fc2addebdf1c5c',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

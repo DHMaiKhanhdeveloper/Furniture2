@@ -7,6 +7,6 @@ import kotlinx.android.parcel.Parcelize
 data class Category(
     val imageResource: Int,
     var title: String,
-    val details: List<Detail>
+    val furnitures: List<Furniture>
 
 ): Parcelable

@@ -13,7 +13,7 @@ class DetailsAdapter(
     private var details: List<Detail>,
     private val itemClick: (Detail) -> Unit
 ) : RecyclerView.Adapter<DetailsAdapter.DetailViewHolder>()
-//    , View.OnClickListener //1
+
 {
 
     private var selectedDetailIndex = 0
@@ -26,9 +26,7 @@ class DetailsAdapter(
 
     class DetailViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-//    private val click: View.OnClickListener by lazy {
-//        View.OnClickListener { }
-//    } //2
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -42,11 +40,7 @@ class DetailsAdapter(
 
     override fun getItemCount() = details.size
 
-//    class OnClick: View.OnClickListener {
-//        override fun onClick(p0: View?) {
-//
-//        }
-//    } // 5
+
 
     override fun onBindViewHolder(holder: DetailViewHolder, position: Int) {
         if (selectedDetailIndex == holder.layoutPosition) {
@@ -59,18 +53,12 @@ class DetailsAdapter(
         holder.itemView.apply {
             ivDetails.setImageResource(details[position].imageDetails)
             tvTitleDetails.text = details[position].titleDetails
-//            setOnClickListener(object: View.OnClickListener {
-//                override fun onClick(p0: View?) {
-//
-//                }
-//            }) // 4
-//                setOnClickListener(OnClick()) //5
+
             setOnClickListener {
                 selectDetail(holder)
                 itemClick(details[position])
             }
-//            setOnClickListener(click) //2 // khuyen nghi dung
-//            setOnClickListener(this@DetailsAdapter) //1
+
         }
     }
 

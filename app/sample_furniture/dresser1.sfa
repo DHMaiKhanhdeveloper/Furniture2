@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '453',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: 'c19d46f48d8dfdb75fce73cde20a8b5c96c21910',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: 'b5ec84a89884ef5fbf9b582ee7b5b056777ebdfc',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/dresser1.glb',
+    name: 'dresser1',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: 'c19d46f48d8dfdb75fce73cde20a8b5c96c21910',
+      pipeline_name: '*2',
+    },
+    {
+      name: 'b5ec84a89884ef5fbf9b582ee7b5b056777ebdfc',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

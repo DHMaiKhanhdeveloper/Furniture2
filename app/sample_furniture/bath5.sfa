@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '346',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '7f458939c60ceb93feea6c003fd2b9f6f6e92f6c',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '95876994adb63550e30ac7fd8fafe934e1ed5ce0',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/bath5.glb',
+    name: 'bath5',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: '7f458939c60ceb93feea6c003fd2b9f6f6e92f6c',
+      pipeline_name: '*2',
+    },
+    {
+      name: '95876994adb63550e30ac7fd8fafe934e1ed5ce0',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

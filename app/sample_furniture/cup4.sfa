@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '585',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '0d2cdc2c48423f032ac2aaee2fcfd72cbc137c62',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '169cac8fd2d47eff5c92c0c22afb3b562a5cf8e8',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/cup4.glb',
+    name: 'cup4',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: '0d2cdc2c48423f032ac2aaee2fcfd72cbc137c62',
+      pipeline_name: '*2',
+    },
+    {
+      name: '169cac8fd2d47eff5c92c0c22afb3b562a5cf8e8',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

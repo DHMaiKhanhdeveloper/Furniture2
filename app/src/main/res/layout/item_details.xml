@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:text="TITLE"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:gravity="center"
         android:ellipsize="end"/>
 </LinearLayout>
