@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '89',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '930732cf56828d993c73f965035e440912220e88',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '21e032860c1254143c38c2c4ee543259ce92e8c1',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/chair6.glb',
+    name: 'chair6',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: '930732cf56828d993c73f965035e440912220e88',
+      pipeline_name: '*2',
+    },
+    {
+      name: '21e032860c1254143c38c2c4ee543259ce92e8c1',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

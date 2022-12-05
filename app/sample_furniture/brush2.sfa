@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '54',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: 'd7ee3e416ac52c86550595858c8d119d9dd109aa',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '7fc8ad4d9f96dfc1cde4fa7678a9d8a1fbe1e1d6',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/brush2.glb',
+    name: 'brush2',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: 'd7ee3e416ac52c86550595858c8d119d9dd109aa',
+      pipeline_name: '*2',
+    },
+    {
+      name: '7fc8ad4d9f96dfc1cde4fa7678a9d8a1fbe1e1d6',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

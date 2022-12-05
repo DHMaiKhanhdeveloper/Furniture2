@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '224',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '57bf6d6dddd6398baaaa9a73d593305ff1ff31b4',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: 'bf24f29246359648c420782cd7de9408ece1f929',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/tivi2.glb',
+    name: 'tivi2',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: '57bf6d6dddd6398baaaa9a73d593305ff1ff31b4',
+      pipeline_name: '*2',
+    },
+    {
+      name: 'bf24f29246359648c420782cd7de9408ece1f929',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

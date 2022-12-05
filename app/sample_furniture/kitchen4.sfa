@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '99',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '32a8203839d3bdc0eef39436aa622e5ee5cee675',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '51cb694701d3b795a1dc4e2bab0a1be37441dc26',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/kitchen4.glb',
+    name: 'kitchen4',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: '32a8203839d3bdc0eef39436aa622e5ee5cee675',
+      pipeline_name: '*2',
+    },
+    {
+      name: '51cb694701d3b795a1dc4e2bab0a1be37441dc26',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}

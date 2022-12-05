@@ -1,0 +1,94 @@
+{
+  materials: [
+    {
+      name: '320',
+      parameters: [
+        {
+          baseColorFactor: null,
+        },
+        {
+          baseColor: null,
+        },
+        {
+          diffuseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          diffuseColor: '1c0bc268a4e31bc26ff51731cf8106bd6c9dd59f',
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: null,
+        },
+        {
+          roughnessFactor: null,
+        },
+        {
+          specularFactor: [
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          glossinessFactor: 1,
+        },
+        {
+          specularGlossiness: '97d763f3de73da0bb07f959f9f53665b7b33e326',
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sample_furniture/bath4.glb',
+    name: 'bath4',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      name: '1c0bc268a4e31bc26ff51731cf8106bd6c9dd59f',
+      pipeline_name: '*2',
+    },
+    {
+      name: '97d763f3de73da0bb07f959f9f53665b7b33e326',
+      pipeline_name: '*3',
+    },
+  ],
+  version: '0.54:2',
+}
